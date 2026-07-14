@@ -22,7 +22,7 @@ export const Navigation = () => {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 h-[80px] transition-all duration-500",
         isScrolled
-          ? "bg-[#030712]/60 backdrop-blur-2xl border-b border-white/[0.04]"
+          ? "bg-[#030712]/70 backdrop-blur-md border-b border-white/[0.04] shadow-lg shadow-black/20"
           : "bg-transparent"
       )}
     >
@@ -37,24 +37,20 @@ export const Navigation = () => {
         </Link>
         
         <nav className="hidden md:flex items-center gap-8">
-          {["Platform", "Solutions", "Customers", "Company"].map((item) => (
+          {["Home", "Solutions", "Industries", "About", "Contact"].map((item) => (
             <Link
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="text-sm font-medium text-muted hover:text-white transition-colors duration-300 relative group py-2"
+              className="text-[15px] font-medium text-white/70 hover:text-white transition-colors duration-300 relative group py-2"
             >
               {item}
-              <span className="absolute left-0 bottom-1 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full opacity-50" />
             </Link>
           ))}
         </nav>
         
         <div className="flex items-center gap-4">
-          <Button variant="ghost" className="hidden md:inline-flex text-white hover:bg-white/10 rounded-full h-10 px-5">
-            Sign In
-          </Button>
-          <Button className="rounded-full h-10 px-6 text-sm">
-            Get Started
+          <Button className="rounded-2xl h-[52px] px-7 text-[15px] font-medium bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#3B82F6] text-white hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all duration-250 border-0">
+            Book an AI Strategy Session
           </Button>
         </div>
       </div>
