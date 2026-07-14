@@ -11,6 +11,9 @@ import { AnimatedCounter } from "@/components/animations/animated-counter";
 import { MagneticWrapper } from "@/components/animations/magnetic-wrapper";
 import { motion } from "framer-motion";
 import { ArrowRight, BarChart3, Cloud, Shield, Activity, Users, DollarSign } from "lucide-react";
+import { BusinessReality } from "@/components/sections/business-reality";
+import { TransformationFramework } from "@/components/sections/transformation-framework";
+import { SolutionsPreview } from "@/components/sections/solutions-preview";
 
 export default function Home() {
   return (
@@ -179,8 +182,10 @@ export default function Home() {
         </div>
       </AuroraBackground>
       
-      {/* Space for other sections... */}
-      <div className="h-screen bg-[#030712]"></div>
+      {/* Master Prompt 2.2 Sections */}
+      <BusinessReality />
+      <TransformationFramework />
+      <SolutionsPreview />
     </SmoothScroll>
   );
 }
