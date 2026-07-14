@@ -28,7 +28,7 @@ export const Navigation = () => {
     >
       <div className="container mx-auto px-6 h-full flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group magnetic">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[var(--color-gradient-01-start)] to-[var(--color-gradient-01-end)] flex items-center justify-center shadow-[0_0_20px_rgba(94,234,212,0.5)]">
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[var(--color-gradient-01-start)] to-[var(--color-gradient-01-end)] flex items-center justify-center shadow-[0_0_20px_rgba(52,211,153,0.5)]">
             <div className="w-3 h-3 bg-white rounded-[4px] group-hover:scale-125 transition-transform duration-500 ease-out" />
           </div>
           <span className="font-heading font-semibold text-xl tracking-tight text-white group-hover:text-white/80 transition-colors duration-300">
