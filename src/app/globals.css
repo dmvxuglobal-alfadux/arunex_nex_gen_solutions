@@ -30,17 +30,17 @@
   --color-ring: var(--ring);
 
   /* Gradients */
-  --color-gradient-01-start: #0B1023;
-  --color-gradient-01-mid1: #132A5A;
-  --color-gradient-01-mid2: #005B8F;
-  --color-gradient-01-end: #007C91;
+  --color-gradient-01-start: #07111F;
+  --color-gradient-01-mid1: #102A43;
+  --color-gradient-01-mid2: #1E3A5F;
+  --color-gradient-01-end: #2563EB;
   
-  --color-gradient-02-start: #0B1023;
-  --color-gradient-02-mid: #005B8F;
-  --color-gradient-02-end: #0EA5E9;
+  --color-gradient-02-start: #07111F;
+  --color-gradient-02-mid: #1E3A5F;
+  --color-gradient-02-end: #60A5FA;
   
-  --color-gradient-03-start: #132A5A;
-  --color-gradient-03-mid: #005B8F;
+  --color-gradient-03-start: #102A43;
+  --color-gradient-03-mid: #1E3A5F;
   --color-gradient-03-end: #3B82F6;
 
   --radius-sm: 8px;
@@ -53,22 +53,22 @@
 
 :root {
   /* Default to dark mode colors since this is a Luxury Dark Mode theme */
-  --background: #050505;
-  --background-secondary: #0A0F14;
-  --surface: #0F1720;
+  --background: #030712;
+  --background-secondary: #07111F;
+  --surface: #07111F;
   --foreground: #FFFFFF;
   
-  --card: #171717;
-  --card-elevated: #1E1E1E;
+  --card: #0B1728;
+  --card-elevated: #11203A;
   --card-foreground: #FFFFFF;
   
   --primary: #FFFFFF;
   --primary-foreground: #050505;
   
-  --secondary: #C4C4C4;
-  --secondary-foreground: #050505;
+  --secondary: #07111F;
+  --secondary-foreground: #FFFFFF;
   
-  --muted: #888888;
+  --muted: #94A3B8;
   --muted-foreground: #FFFFFF;
   
   --accent: #1E1E1E;

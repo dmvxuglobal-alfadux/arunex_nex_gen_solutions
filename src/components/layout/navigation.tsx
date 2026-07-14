@@ -22,7 +22,7 @@ export const Navigation = () => {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 h-[80px] transition-all duration-500",
         isScrolled
-          ? "bg-[#050505]/60 backdrop-blur-2xl border-b border-white/[0.04]"
+          ? "bg-[#030712]/60 backdrop-blur-2xl border-b border-white/[0.04]"
           : "bg-transparent"
       )}
     >
