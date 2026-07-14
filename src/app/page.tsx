@@ -14,6 +14,9 @@ import { ArrowRight, BarChart3, Cloud, Shield, Activity, Users, DollarSign } fro
 import { BusinessReality } from "@/components/sections/business-reality";
 import { TransformationFramework } from "@/components/sections/transformation-framework";
 import { SolutionsPreview } from "@/components/sections/solutions-preview";
+import { WhyArunex } from "@/components/sections/why-arunex";
+import { Industries } from "@/components/sections/industries";
+import { InnovationEcosystem } from "@/components/sections/innovation-ecosystem";
 
 export default function Home() {
   return (
@@ -186,6 +189,11 @@ export default function Home() {
       <BusinessReality />
       <TransformationFramework />
       <SolutionsPreview />
+
+      {/* Master Prompt 2.3 Sections */}
+      <WhyArunex />
+      <Industries />
+      <InnovationEcosystem />
     </SmoothScroll>
   );
 }
