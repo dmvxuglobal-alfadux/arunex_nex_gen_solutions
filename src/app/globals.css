@@ -30,18 +30,18 @@
   --color-ring: var(--ring);
 
   /* Gradients */
-  --color-gradient-01-start: #030303;
-  --color-gradient-01-mid1: #064E3B;
-  --color-gradient-01-mid2: #059669;
-  --color-gradient-01-end: #34D399;
+  --color-gradient-01-start: #0B1023;
+  --color-gradient-01-mid1: #132A5A;
+  --color-gradient-01-mid2: #005B8F;
+  --color-gradient-01-end: #007C91;
   
-  --color-gradient-02-start: #030303;
-  --color-gradient-02-mid: #059669;
-  --color-gradient-02-end: #34D399;
+  --color-gradient-02-start: #0B1023;
+  --color-gradient-02-mid: #005B8F;
+  --color-gradient-02-end: #0EA5E9;
   
-  --color-gradient-03-start: #064E3B;
-  --color-gradient-03-mid: #059669;
-  --color-gradient-03-end: #34D399;
+  --color-gradient-03-start: #132A5A;
+  --color-gradient-03-mid: #005B8F;
+  --color-gradient-03-end: #3B82F6;
 
   --radius-sm: 8px;
   --radius-md: 16px;
@@ -53,9 +53,9 @@
 
 :root {
   /* Default to dark mode colors since this is a Luxury Dark Mode theme */
-  --background: #030303;
-  --background-secondary: #080808;
-  --surface: #0B0B0B;
+  --background: #050505;
+  --background-secondary: #0A0F14;
+  --surface: #0F1720;
   --foreground: #FFFFFF;
   
   --card: #171717;
@@ -86,7 +86,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground antialiased selection:bg-[#34D399]/30 selection:text-white;
+    @apply bg-background text-foreground antialiased selection:bg-[#3B82F6]/30 selection:text-white;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02";
   }
   html {
