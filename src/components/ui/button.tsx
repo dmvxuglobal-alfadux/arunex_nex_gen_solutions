@@ -8,7 +8,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-gradient-to-r from-[var(--color-gradient-01-start)] via-[var(--color-gradient-01-mid2)] to-[var(--color-gradient-01-end)] text-white shadow-[0_10px_40px_rgba(0,0,0,0.35)] hover:shadow-[0_20px_60px_rgba(59,130,246,0.25)] hover:scale-[1.03] bg-[length:200%_auto] hover:bg-[position:right_center]",
+        default: "bg-gradient-to-br from-[#1D4ED8] via-[#2563EB] to-[#3B82F6] text-white shadow-[0_10px_40px_rgba(0,0,0,0.35)] hover:shadow-[0_20px_60px_rgba(59,130,246,0.3)] hover:scale-[1.03] hover:from-[#60A5FA] hover:via-[#3B82F6] hover:to-[#2563EB]",
         outline:
           "border border-white/10 bg-white/5 backdrop-blur-md hover:bg-white/10 hover:shadow-[0_0_20px_rgba(255,255,255,0.05)] text-white hover:scale-[1.03]",
         secondary:

@@ -23,48 +23,32 @@ export const AuroraBackground = ({
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 0.15 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 2, ease: "easeOut" }}
-          className="absolute -inset-[10px] will-change-transform"
+          className="absolute inset-0 will-change-transform"
         >
-          {/* Blob 1 */}
-          <motion.div
-            animate={{
-              x: ["0%", "20%", "0%", "-20%", "0%"],
-              y: ["0%", "20%", "0%", "-20%", "0%"],
-            }}
-            transition={{
-              duration: 20,
-              repeat: Infinity,
-              ease: "linear",
-            }}
-            className="absolute top-0 left-0 w-[50vw] h-[50vh] rounded-full bg-[var(--color-gradient-01-start)] opacity-60 blur-[160px]"
+          {/* Soft Sapphire Glow (Top) */}
+          <div
+            className="absolute -top-[10%] left-1/2 -translate-x-1/2 w-[60vw] h-[40vh] rounded-full blur-[200px] pointer-events-none"
+            style={{ backgroundColor: "rgba(37,99,235,0.18)" }}
           />
-          {/* Blob 2 */}
-          <motion.div
-            animate={{
-              x: ["0%", "-30%", "0%", "30%", "0%"],
-              y: ["0%", "-20%", "0%", "20%", "0%"],
-            }}
-            transition={{
-              duration: 25,
-              repeat: Infinity,
-              ease: "linear",
-            }}
-            className="absolute top-1/2 right-0 w-[60vw] h-[60vh] rounded-full bg-[var(--color-gradient-02-mid)] opacity-50 blur-[160px]"
+          
+          {/* Deep Navy Glow (Bottom Left) */}
+          <div
+            className="absolute bottom-0 -left-[10%] w-[50vw] h-[50vh] rounded-full blur-[240px] pointer-events-none"
+            style={{ backgroundColor: "rgba(29,78,216,0.15)" }}
           />
-          {/* Blob 3 */}
-          <motion.div
-            animate={{
-              x: ["0%", "40%", "0%", "-40%", "0%"],
-              y: ["0%", "30%", "0%", "-30%", "0%"],
-            }}
-            transition={{
-              duration: 30,
-              repeat: Infinity,
-              ease: "linear",
-            }}
-            className="absolute bottom-0 left-1/4 w-[40vw] h-[40vh] rounded-full bg-[var(--color-gradient-03-end)] opacity-70 blur-[160px]"
+          
+          {/* Blue Glow (Bottom Right) */}
+          <div
+            className="absolute bottom-0 -right-[10%] w-[40vw] h-[40vh] rounded-full blur-[180px] pointer-events-none"
+            style={{ backgroundColor: "rgba(59,130,246,0.12)" }}
+          />
+
+          {/* Soft Cyan Highlight (Far Bottom Right) */}
+          <div
+            className="absolute -bottom-[20%] right-0 w-[30vw] h-[30vh] rounded-full blur-[260px] pointer-events-none"
+            style={{ backgroundColor: "rgba(147,197,253,0.08)" }}
           />
         </motion.div>
       </div>
