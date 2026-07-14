@@ -93,7 +93,7 @@ export const Industries = () => {
         </motion.div>
 
         {/* Transition Out Statement */}
-        <motion.div style={{ opacity: statementOpacity }} className="absolute bottom-20 left-1/2 -translate-x-1/2 w-full text-center px-6 pointer-events-none">
+        <motion.div style={{ opacity: statementOpacity }} className="w-full text-center px-6 pointer-events-none pb-20">
           <h2 className="font-heading text-3xl md:text-5xl lg:text-[56px] leading-[1.2] font-bold tracking-tight text-white max-w-[1000px] mx-auto">
             Transformation is stronger when <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-gradient-01-start)] to-[var(--color-gradient-01-end)]">technology, talent, and learning</span> work together.
           </h2>

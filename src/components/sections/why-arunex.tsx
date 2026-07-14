@@ -95,7 +95,7 @@ export const WhyArunex = () => {
         </motion.div>
 
         {/* Transition Out Statement */}
-        <motion.div style={{ opacity: statementOpacity }} className="absolute bottom-20 left-1/2 -translate-x-1/2 w-full text-center px-6 pointer-events-none">
+        <motion.div style={{ opacity: statementOpacity }} className="w-full text-center px-6 pointer-events-none pb-20">
           <h2 className="font-heading text-4xl md:text-[56px] leading-[1.1] font-bold tracking-tight text-white">
             Every business is different.<br className="hidden md:block"/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-gradient-01-start)] to-[var(--color-gradient-01-end)]">
