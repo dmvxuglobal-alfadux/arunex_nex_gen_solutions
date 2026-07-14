@@ -1,0 +1,96 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-heading);
+  
+  --color-card: var(--card);
+  --color-card-elevated: var(--card-elevated);
+  --color-card-foreground: var(--card-foreground);
+  
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-divider: var(--divider);
+  --color-ring: var(--ring);
+
+  /* Gradients */
+  --color-gradient-01-start: #4F46E5;
+  --color-gradient-01-mid1: #6D28D9;
+  --color-gradient-01-mid2: #7C3AED;
+  --color-gradient-01-end: #06B6D4;
+  
+  --color-gradient-02-start: #4338CA;
+  --color-gradient-02-mid: #7E22CE;
+  --color-gradient-02-end: #2563EB;
+  
+  --color-gradient-03-start: #312E81;
+  --color-gradient-03-mid: #4F46E5;
+  --color-gradient-03-end: #0EA5E9;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-2xl: 40px;
+  --radius-full: 999px;
+}
+
+:root {
+  /* Default to dark mode colors since this is a Luxury Dark Mode theme */
+  --background: #050505;
+  --background-secondary: #0B0B0B;
+  --surface: #101010;
+  --foreground: #FFFFFF;
+  
+  --card: #171717;
+  --card-elevated: #1E1E1E;
+  --card-foreground: #FFFFFF;
+  
+  --primary: #FFFFFF;
+  --primary-foreground: #050505;
+  
+  --secondary: #C4C4C4;
+  --secondary-foreground: #050505;
+  
+  --muted: #888888;
+  --muted-foreground: #FFFFFF;
+  
+  --accent: #1E1E1E;
+  --accent-foreground: #FFFFFF;
+  
+  --border: rgba(255,255,255,0.08);
+  --divider: rgba(255,255,255,0.06);
+  --ring: rgba(255,255,255,0.2);
+  
+  --radius: 16px;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-indigo-500/30 selection:text-white;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+  }
+  html {
+    @apply font-sans;
+    scroll-behavior: smooth;
+  }
+}
