@@ -30,18 +30,18 @@
   --color-ring: var(--ring);
 
   /* Gradients */
-  --color-gradient-01-start: #4F46E5;
-  --color-gradient-01-mid1: #6D28D9;
-  --color-gradient-01-mid2: #7C3AED;
-  --color-gradient-01-end: #06B6D4;
+  --color-gradient-01-start: #041C32;
+  --color-gradient-01-mid1: #064663;
+  --color-gradient-01-mid2: #0A6E7A;
+  --color-gradient-01-end: #18B7BE;
   
-  --color-gradient-02-start: #4338CA;
-  --color-gradient-02-mid: #7E22CE;
-  --color-gradient-02-end: #2563EB;
+  --color-gradient-02-start: #041C32;
+  --color-gradient-02-mid: #0A6E7A;
+  --color-gradient-02-end: #18B7BE;
   
-  --color-gradient-03-start: #312E81;
-  --color-gradient-03-mid: #4F46E5;
-  --color-gradient-03-end: #0EA5E9;
+  --color-gradient-03-start: #064663;
+  --color-gradient-03-mid: #0A6E7A;
+  --color-gradient-03-end: #5EEAD4;
 
   --radius-sm: 8px;
   --radius-md: 16px;
@@ -86,7 +86,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground antialiased selection:bg-indigo-500/30 selection:text-white;
+    @apply bg-background text-foreground antialiased selection:bg-[#5EEAD4]/30 selection:text-white;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02";
   }
   html {
