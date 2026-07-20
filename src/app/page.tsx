@@ -17,6 +17,9 @@ import { SolutionsPreview } from "@/components/sections/solutions-preview";
 import { WhyArunex } from "@/components/sections/why-arunex";
 import { Industries } from "@/components/sections/industries";
 import { InnovationEcosystem } from "@/components/sections/innovation-ecosystem";
+import { BusinessImpact } from "@/components/sections/business-impact";
+import { FeaturedTransformations } from "@/components/sections/featured-transformations";
+import { FinalCTA } from "@/components/sections/final-cta";
 
 export default function Home() {
   return (
@@ -194,6 +197,11 @@ export default function Home() {
       <WhyArunex />
       <Industries />
       <InnovationEcosystem />
+
+      {/* Master Prompt 2.4 Sections */}
+      <BusinessImpact />
+      <FeaturedTransformations />
+      <FinalCTA />
     </SmoothScroll>
   );
 }
