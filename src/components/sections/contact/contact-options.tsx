@@ -1,7 +1,7 @@
 "use client";
 
 import { ScrollReveal } from "@/components/animations/scroll-reveal";
-import { Mail, Phone, MapPin, Clock, Linkedin, ArrowUpRight } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Globe, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
 const options = [
@@ -38,7 +38,7 @@ const options = [
     colSpan: "md:col-span-1"
   },
   {
-    icon: Linkedin,
+    icon: Globe,
     title: "LinkedIn",
     details: "Arunex Gen Solutions",
     actionText: "Follow Us",

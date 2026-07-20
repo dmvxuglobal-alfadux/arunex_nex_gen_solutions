@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Linkedin, Twitter, Github, ArrowRight } from "lucide-react";
+import { Globe, MessageCircle, Code, ArrowRight } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -28,9 +28,9 @@ export const Footer = () => {
             </p>
             <div className="flex items-center gap-4">
               {[
-                { icon: Linkedin, href: "#" },
-                { icon: Twitter, href: "#" },
-                { icon: Github, href: "#" },
+                { icon: Globe, href: "#" },
+                { icon: MessageCircle, href: "#" },
+                { icon: Code, href: "#" },
               ].map((social, i) => (
                 <Link 
                   key={i} 
