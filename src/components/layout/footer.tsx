@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Linkedin, Twitter, Github } from "lucide-react";
+import { ArrowUpRight, Briefcase, MessageCircle, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const footerLinks = {
@@ -48,7 +48,7 @@ export const Footer = () => {
               An AI-Powered Business Transformation Company. We help businesses modernize operations through intelligent automation and strategic growth.
             </p>
             <div className="flex items-center gap-4 mt-2">
-              {[Linkedin, Twitter, Github].map((Icon, i) => (
+              {[Briefcase, MessageCircle, Globe].map((Icon, i) => (
                 <a key={i} href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all duration-300 group">
                   <Icon className="w-4 h-4 group-hover:rotate-12 transition-transform duration-300" />
                 </a>
@@ -131,7 +131,7 @@ export const Footer = () => {
               </Link>
             ))}
             <a href="#" className="text-[13px] text-white/40 hover:text-[var(--color-gradient-01-end)] transition-colors flex items-center gap-1">
-              <Linkedin className="w-3 h-3" /> LinkedIn
+              <Briefcase className="w-3 h-3" /> LinkedIn
             </a>
           </div>
         </div>
