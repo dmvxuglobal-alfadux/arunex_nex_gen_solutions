@@ -1,72 +1,61 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { ArrowUpRight, Briefcase, MessageCircle, Globe } from "lucide-react";
-import { Button } from "@/components/ui/button";
-
-const footerLinks = {
-  solutions: [
-    { label: "AI Business Starter", href: "/solutions/starter" },
-    { label: "AI Growth Accelerator", href: "/solutions/growth" },
-    { label: "Digital Enterprise", href: "/solutions/enterprise" },
-    { label: "CEO Intelligence Suite", href: "/solutions/ceo" },
-    { label: "Sales Growth Suite", href: "/solutions/sales" }
-  ],
-  company: [
-    { label: "About", href: "/about" },
-    { label: "Industries", href: "/industries" },
-    { label: "Insights", href: "/insights" },
-    { label: "Careers", href: "/careers" },
-    { label: "Contact", href: "/contact" }
-  ],
-  legal: [
-    { label: "Privacy Policy", href: "/privacy" },
-    { label: "Terms of Service", href: "/terms" },
-    { label: "Cookie Policy", href: "/cookies" }
-  ]
-};
+import { Linkedin, Twitter, Github, ArrowRight } from "lucide-react";
 
 export const Footer = () => {
   return (
-    <footer className="w-full bg-[#02040A] border-t border-white/5 pt-24 pb-8 relative z-30">
+    <footer className="relative w-full bg-[#030712] pt-24 pb-8 z-20 overflow-hidden border-t border-white/[0.02]">
       
-      {/* Soft Top Glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-[1px] bg-gradient-to-r from-transparent via-[var(--color-gradient-01-end)]/20 to-transparent blur-[1px]" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
-      <div className="container mx-auto px-6 max-w-[1440px]">
+      <div className="container mx-auto px-6 max-w-[1440px] relative z-10">
         
-        {/* Top Section - 4 Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-24">
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-20">
           
           {/* Column 1: Brand */}
-          <div className="flex flex-col gap-6">
-            <Link href="/" className="inline-block">
-              <span className="font-heading text-2xl font-bold tracking-tight text-white">Arunex</span>
+          <div className="lg:col-span-4 pr-8">
+            <Link href="/" className="flex items-center gap-2 mb-6 group">
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[var(--color-gradient-01-start)] to-[var(--color-gradient-01-end)] flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-white/20 blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity" />
+                <span className="text-white font-bold text-xl leading-none relative z-10 -ml-[1px]">A</span>
+              </div>
+              <span className="font-heading font-bold text-xl tracking-tight text-white">ARUNEX<span className="text-white/40">.</span></span>
             </Link>
-            <p className="text-[15px] text-white/50 leading-relaxed font-light max-w-[280px]">
-              An AI-Powered Business Transformation Company. We help businesses modernize operations through intelligent automation and strategic growth.
+            <p className="text-[15px] text-white/50 font-light leading-relaxed mb-8 max-w-[320px]">
+              AI-Powered Business Transformation Partner. We help organizations scale through intelligent automation, practical AI, and actionable analytics.
             </p>
-            <div className="flex items-center gap-4 mt-2">
-              {[Briefcase, MessageCircle, Globe].map((Icon, i) => (
-                <a key={i} href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all duration-300 group">
-                  <Icon className="w-4 h-4 group-hover:rotate-12 transition-transform duration-300" />
-                </a>
+            <div className="flex items-center gap-4">
+              {[
+                { icon: Linkedin, href: "#" },
+                { icon: Twitter, href: "#" },
+                { icon: Github, href: "#" },
+              ].map((social, i) => (
+                <Link 
+                  key={i} 
+                  href={social.href}
+                  className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/5 hover:bg-white/10 hover:border-white/20 transition-all duration-300 group"
+                >
+                  <social.icon className="w-4 h-4 text-white/50 group-hover:text-white transition-colors" />
+                </Link>
               ))}
             </div>
           </div>
 
           {/* Column 2: Solutions */}
-          <div>
-            <h4 className="text-sm font-semibold text-white mb-6 uppercase tracking-wider">Solutions</h4>
+          <div className="lg:col-span-3">
+            <h4 className="text-[14px] font-semibold text-white uppercase tracking-widest mb-6">Solutions</h4>
             <ul className="space-y-4">
-              {footerLinks.solutions.map((link) => (
-                <li key={link.label}>
-                  <Link href={link.href} className="group inline-flex items-center text-[15px] text-white/60 hover:text-white transition-colors duration-250">
-                    <span className="relative">
-                      {link.label}
-                      <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-[var(--color-gradient-01-end)]/50 transition-all duration-300 group-hover:w-full" />
-                    </span>
+              {[
+                { label: "AI Business Starter", href: "/solutions/starter" },
+                { label: "AI Growth Accelerator", href: "/solutions/growth" },
+                { label: "Digital Enterprise", href: "/solutions/enterprise" }
+              ].map((link, i) => (
+                <li key={i}>
+                  <Link href={link.href} className="text-[15px] text-white/50 font-light hover:text-[var(--color-gradient-01-end)] transition-colors flex items-center gap-2 group">
+                    <ArrowRight className="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                    <span className="group-hover:translate-x-1 transition-transform duration-300">{link.label}</span>
                   </Link>
                 </li>
               ))}
@@ -74,65 +63,55 @@ export const Footer = () => {
           </div>
 
           {/* Column 3: Company */}
-          <div>
-            <h4 className="text-sm font-semibold text-white mb-6 uppercase tracking-wider">Company</h4>
+          <div className="lg:col-span-3">
+            <h4 className="text-[14px] font-semibold text-white uppercase tracking-widest mb-6">Company</h4>
             <ul className="space-y-4">
-              {footerLinks.company.map((link) => (
-                <li key={link.label}>
-                  <Link href={link.href} className="group inline-flex items-center text-[15px] text-white/60 hover:text-white transition-colors duration-250">
-                    <span className="relative">
-                      {link.label}
-                      <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-[var(--color-gradient-01-end)]/50 transition-all duration-300 group-hover:w-full" />
-                    </span>
+              {[
+                { label: "About", href: "/about" },
+                { label: "Industries", href: "/about" },
+                { label: "Innovation Ecosystem", href: "/about" },
+                { label: "Contact", href: "/contact" }
+              ].map((link, i) => (
+                <li key={i}>
+                  <Link href={link.href} className="text-[15px] text-white/50 font-light hover:text-[var(--color-gradient-01-end)] transition-colors flex items-center gap-2 group">
+                    <ArrowRight className="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                    <span className="group-hover:translate-x-1 transition-transform duration-300">{link.label}</span>
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Column 4: Contact */}
-          <div>
-            <h4 className="text-sm font-semibold text-white mb-6 uppercase tracking-wider">Contact</h4>
-            <ul className="space-y-4 mb-8">
-              <li>
-                <a href="mailto:hello@arunex.com" className="text-[15px] text-white/60 hover:text-white transition-colors">
-                  hello@arunex.com
-                </a>
-              </li>
-              <li>
-                <span className="text-[15px] text-white/60">
-                  +1 (800) 123-4567
-                </span>
-              </li>
-              <li>
-                <span className="text-[15px] text-white/60 font-light block max-w-[200px] leading-relaxed">
-                  123 Innovation Drive,<br/>
-                  Tech District, CA 94103
-                </span>
-              </li>
+          {/* Column 4: Resources */}
+          <div className="lg:col-span-2">
+            <h4 className="text-[14px] font-semibold text-white uppercase tracking-widest mb-6">Resources</h4>
+            <ul className="space-y-4">
+              {[
+                { label: "FAQs", href: "/contact" },
+                { label: "Privacy Policy", href: "#" },
+                { label: "Terms & Conditions", href: "#" },
+                { label: "Careers", href: "#" }
+              ].map((link, i) => (
+                <li key={i}>
+                  <Link href={link.href} className="text-[15px] text-white/50 font-light hover:text-white transition-colors">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
-            <Button className="w-full sm:w-auto rounded-xl bg-white/5 border border-white/10 text-white hover:bg-white/10 group">
-              Book Strategy Session
-              <ArrowUpRight className="ml-2 w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-            </Button>
           </div>
 
         </div>
 
-        {/* Bottom Bar */}
+        {/* Bottom Footer */}
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-[13px] text-white/40 font-light">
+          <div className="text-[14px] text-white/40 font-light">
             © {new Date().getFullYear()} Arunex Gen Solutions. All rights reserved.
-          </p>
-          <div className="flex flex-wrap items-center gap-6">
-            {footerLinks.legal.map((link) => (
-              <Link key={link.label} href={link.href} className="text-[13px] text-white/40 hover:text-white/80 transition-colors">
-                {link.label}
-              </Link>
-            ))}
-            <a href="#" className="text-[13px] text-white/40 hover:text-[var(--color-gradient-01-end)] transition-colors flex items-center gap-1">
-              <Briefcase className="w-3 h-3" /> LinkedIn
-            </a>
+          </div>
+          <div className="flex items-center gap-6">
+            <Link href="#" className="text-[13px] text-white/40 hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="#" className="text-[13px] text-white/40 hover:text-white transition-colors">Terms of Service</Link>
+            <Link href="#" className="text-[13px] text-white/40 hover:text-white transition-colors">Cookie Policy</Link>
           </div>
         </div>
 
