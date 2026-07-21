@@ -14,8 +14,8 @@ export const motionTokens = {
   
   // Easings (Standardized arrays for Framer Motion)
   ease: {
-    standard: [0.16, 1, 0.3, 1],
-    emphasized: [0.2, 1, 0.1, 1],
+    standard: [0.16, 1, 0.3, 1] as const,
+    emphasized: [0.2, 1, 0.1, 1] as const,
     linear: "linear",
     easeInOut: "easeInOut",
   }
