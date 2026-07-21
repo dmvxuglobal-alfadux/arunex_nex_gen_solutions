@@ -38,7 +38,7 @@ export const AuroraBackground = ({
             }}
             transition={{
               opacity: { duration: 2 },
-              x: { duration: 35, repeat: Infinity, ease: "easeInOut" },
+              x: { duration: 30, repeat: Infinity, ease: "easeInOut" },
               y: { duration: 45, repeat: Infinity, ease: "easeInOut" },
             }}
             className="absolute top-[-20%] left-[-20%] w-[60%] h-[60%] rounded-full bg-[#102A43]"

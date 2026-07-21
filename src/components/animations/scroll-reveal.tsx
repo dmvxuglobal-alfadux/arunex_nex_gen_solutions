@@ -18,31 +18,47 @@ export const ScrollReveal = ({
   direction = "up",
   duration = 0.7,
 }: ScrollRevealProps) => {
-  const directions = {
-    up: { y: 40, x: 0 },
-    down: { y: -40, x: 0 },
-    left: { x: 40, y: 0 },
-    right: { x: -40, y: 0 },
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  const getVariants = () => {
+    switch (direction) {
+      case "up":
+        return {
+          hidden: { opacity: 0, y: 30, scale: 0.98 },
+          visible: { opacity: 1, y: 0, scale: 1 },
+        };
+      case "down":
+        return {
+          hidden: { opacity: 0, y: -30, scale: 0.98 },
+          visible: { opacity: 1, y: 0, scale: 1 },
+        };
+      case "left":
+        return {
+          hidden: { opacity: 0, x: 30, scale: 0.98 },
+          visible: { opacity: 1, x: 0, scale: 1 },
+        };
+      case "right":
+        return {
+          hidden: { opacity: 0, x: -30, scale: 0.98 },
+          visible: { opacity: 1, x: 0, scale: 1 },
+        };
+      case "none":
+        return {
+          hidden: { opacity: 0, scale: 0.98 },
+          visible: { opacity: 1, scale: 1 },
+        };
+    }
   };
 
   return (
     <motion.div
-      initial={{
-        opacity: 0,
-        ...directions[direction],
-      }}
-      whileInView={{
-        opacity: 1,
-        x: 0,
-        y: 0,
-      }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{
-        duration,
-        delay,
-        ease: [0.21, 0.47, 0.32, 0.98], // Custom ease-out cubic
-      }}
-      className={cn("will-change-transform", className)}
+      ref={ref}
+      variants={getVariants()}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      transition={{ duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] }}
+      className={className}
     >
       {children}
     </motion.div>
