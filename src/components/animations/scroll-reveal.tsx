@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 interface ScrollRevealProps {
   children: React.ReactNode;
   delay?: number;
-  direction?: "up" | "down" | "left" | "right";
+  direction?: "up" | "down" | "left" | "right" | "none";
   duration?: number;
   className?: string;
 }
